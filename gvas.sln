@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GvasFormat", "GvasFormat\Gv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GvasConverter", "GvasConverter\GvasConverter.csproj", "{F618BACD-D0A4-409D-B74B-29D0BFFB803F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{CDFD7780-0D2B-42AA-84C0-9D713A6D4D6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GvasFormat.Tests", "tests\GvasFormat.Tests\GvasFormat.Tests.csproj", "{F6B49FF5-8DC3-44E9-B9F8-515CF3DDDD1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,11 +25,18 @@ Global
 		{F618BACD-D0A4-409D-B74B-29D0BFFB803F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F618BACD-D0A4-409D-B74B-29D0BFFB803F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F618BACD-D0A4-409D-B74B-29D0BFFB803F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6B49FF5-8DC3-44E9-B9F8-515CF3DDDD1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6B49FF5-8DC3-44E9-B9F8-515CF3DDDD1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6B49FF5-8DC3-44E9-B9F8-515CF3DDDD1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6B49FF5-8DC3-44E9-B9F8-515CF3DDDD1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E72A49C8-E2E5-462E-9C25-E95CB38428EE}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F6B49FF5-8DC3-44E9-B9F8-515CF3DDDD1D} = {CDFD7780-0D2B-42AA-84C0-9D713A6D4D6B}
 	EndGlobalSection
 EndGlobal
