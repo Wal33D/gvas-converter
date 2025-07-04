@@ -15,8 +15,10 @@ namespace GvasFormat.Serialization.UETypes
         public static UEByteProperty Read(BinaryReader reader, long valueLength)
         {
             var terminator = reader.ReadByte();
-            if (terminator != 0)
-                throw new FormatException($"Offset: 0x{reader.BaseStream.Position - 1:x8}. Expected terminator (0x00), but was (0x{terminator:x2})");
+            // Some games incorrectly store a non-zero value here. Skip any
+            // non-zero bytes instead of failing the read.
+            while (terminator != 0 && reader.BaseStream.Position < reader.BaseStream.Length)
+                terminator = reader.ReadByte();
 
             // valueLength starts here
             var arrayLength = reader.ReadInt32();
