@@ -31,7 +31,7 @@ namespace GvasFormat.Utils
             if (hex.Length %2 == 1)
                 throw new InvalidOperationException($"Odd hex string length of {hex.Length}");
 
-            var result = new byte[hex.Length % 2];
+            var result = new byte[hex.Length / 2];
             for (int i = 0, j = 0; i < hex.Length; i += 2, j++)
                 result[j] = byte.Parse(hex.Substring(i, 2), NumberStyles.HexNumber);
             return result;
